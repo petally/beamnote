@@ -3,7 +3,7 @@ Mūsdienu programmētāji un studenti bieži vien vēlas ātri kopīgot koda fra
 
 Mērķauditorija neaprobežojas tikai ar programmētājiem un studentiem. Tā kā šis ir daudzfunkcionāls rīks, to var izmantot ikviens, kam ir nepieciešams dalīties ar teksta saturu internetā.
 # Programmatūras prasību specifikācija
-## Funkcionālās prasības:
+**Funkcionālās prasības:**
 
 Lietotājs var reģistrēties un pieteikties sistēmā.
 Autentificēts lietotājs var izveidot, rediģēt un dzēst savus teksta fragmentus (notes).
@@ -18,7 +18,7 @@ Sistēma nodrošina divu līmeņu piekļuvi: parasts lietotājs (user) un admini
 - Lietotne reaģē uz pieprasījumiem mazāk nekā 1 sekundē lokālā vidē.
 
 
-**Programmatūras dizains**
+# Programmatūras dizains
 Izstrādē tika izmantots Python ar Flask mikro-ietvaru, jo tas ir viegls, plaši izmantots un piemērots mazām tīmekļa lietotnēm. Datu glabāšanai izvēlēts SQLite-- tas nevēlas atsevišķa servera un ir ideāls vienkāršiem projektiem. Veidnes tiek renderētas ar Jinja2 (iebūvēts Flask).
 
 Sistēma sastāv no trim galvenajiem moduļiem:
