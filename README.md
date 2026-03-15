@@ -1,5 +1,6 @@
 # beamnote
 [Dokumentācija](./DOCS.md)
+![Example image](./example.png)
 
 a pastebin inspired text file hosting service (for my school project)
 
