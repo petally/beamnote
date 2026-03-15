@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Recent Notes</h1>
+{% if notes %}
+  <ul>
+    {% for note in notes %}
+      <li>
+        <a href="{{ url_for('view_note', note_id=note.id) }}">{{ note.title }}</a>
+        by {{ note.author }} - {{ note.created_at }}<br>
+        <small>{{ note.preview() }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No notes just yet</p>
+{% endif %}
+{% endblock %}

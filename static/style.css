@@ -1,0 +1,42 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #114488;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+pre {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+#main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: clamp(50%, 75ch, 150ch);
+  height: 90vh;
+}
+
+#logo {
+  width: 100%;
+  background-color: #114488;  
+  text-align: right;
+  color: #FFF;
+}
+
+#logo h1 {
+  margin: 0;
+}
+
+#content {
+  background-color: #EEE;
+  padding: 1rem;
+  flex-grow: 1;
+  overflow: scroll;
+}

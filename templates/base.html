@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>beamnote</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="main-wrapper">
+<div id="logo"><h1>beamnote</h1></div>
+<div id="content">
+  <nav>
+    <a href="{{ url_for('index') }}">Home</a> |
+    {% if session.username %}
+      Logged in as <strong>{{ session.username }}</strong> ({{ session.role }}) |
+      <a href="{{ url_for('new_note') }}">New Note</a> |
+      {% if session.role == 'admin' %}
+        <a href="{{ url_for('admin_panel') }}">Admin Panel</a> |
+      {% endif %}
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+      <a href="{{ url_for('login') }}">Login</a> |
+      <a href="{{ url_for('register') }}">Register</a>
+    {% endif %}
+  </nav>
+
+  <hr>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}<p><em>{{ msg }}</em></p>{% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</div>
+</div>
+</body>
+</html>
